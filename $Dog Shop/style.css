@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    font-weight: 400;
+    line-height: 1.8em;
+    font-family: 'Roboto', sans-serif;
+    background-color: #555;
+    color: black;
+}
+
+/*Images*/
+
+.container1, .container2, .container3, .container4{
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container1{
+    background-image: url('images/dog1.jpg') ;
+    min-height: 100%;
+}
+.container2{
+    background-image: url('images/dog2.jpg') ;
+    min-height: 50%;
+}
+.container3{
+    background-image: url('images/dog3.jpg') ;
+    min-height: 50%;
+}
+.container4{
+    background-image: url('images/dog4.jpg') ;
+    min-height: 90%;
+}
+
+/*Text*/
+
+.section{
+    text-align: center;
+    padding: 50px 80px;
+}
+.sec-light{
+    background-color: #f4f4f4;
+    color:#000;
+}
+.sec-dark{
+    background-color: #282e34;
+    color:#ddd;
+}
+
+.text-wrapper{
+    position: absolute;
+    text-align: center;
+    top: 20vh;
+    width: 100%;
+    color:#000;
+    font-size: 1.56rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.wrapper {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 10vh;
+    color:#000;
+    font-size: 1.56rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+.wrapper .content,.text-wrapper .content{
+    background-color: #111;
+    color: #ddd;
+    padding:20px;
+}
+.text-wrapper .trans{
+    background-color: transparent;
+}
+
+@media screen 
+and (max-width: 600px){
+    .container1, .container2, .container3, .container4{
+        background-attachment: scroll;
+    }
+    .container1{
+        min-height: 50%;
+        
+    }  
+    .wrapper{
+        font-size: 1rem;
+        top:5vh;
+    }
+    .wrapper .content{
+        padding: 10px;
+    }
+    .text-wrapper{
+        top:5vh;
+        font-size: 1rem;
+    }
+    .section p{
+        font-weight: 200;
+        line-height: 1.2em;
+    }
+}
