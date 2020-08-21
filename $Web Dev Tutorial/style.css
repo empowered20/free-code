@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+body{
+     font-family: 'Roboto', sans-serif;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 2.375rem;
+}
+.right{
+    display: flex;
+    gap: 1em ;
+}
+.nav-wrapper > .right >div{
+    margin-top: .25em;
+    margin-right: .5rem;
+    text-transform: uppercase;
+    font-size: 1.25em;
+}
+.nav-wrapper  a{
+    color: #8a8a8a;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+  }
+  .active-nav-link a {
+    color: crimson;
+  }
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+  }
+  
+  .nav-link-wrapper a:hover {
+    color: black;
+  }
+  .left {
+    display: flex;
+  }
+  .left .branding{
+       
+      color: crimson;
+  }
+  .items-wrapper{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+  }
+.img-background{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    width: 100%;
+}
+.img-wrapper{
+    position: relative;
+}
+.img-background:hover{
+    transition: 1s;
+    filter: brightness(45%);
+}
+@media(max-width:640px){
+    .items-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    } 
+    .left h1{
+        font-size: 1.25em;
+    }
+
+    .nav-wrapper > .right >div{
+        margin-top: .25em;
+        margin-right: .5rem;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+    .img-background{
+        height: 360px;
+    }
+
+}
+
+@media(max-width:360px){
+    .items-wrapper{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    } 
+    .left h1{
+        font-size: 1em;
+    }
+
+    .nav-wrapper > .right >div{
+        margin-top: .25em;
+        margin-right: .5rem;
+        text-transform: uppercase;
+        font-size: .75em;
+    }
+    .img-background{
+        height: 180px;
+    }
+    
+    .right{
+        gap: 0.5em ;
+    }
+}
